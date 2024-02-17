@@ -6,7 +6,7 @@ const port = 3000
 
 app.get('/discount/:signature', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
-    return res.send(calculateDiscount('eyJjb3Vwb25JZCI6MSwibWVzc2FnZSI6IjEiLCJzaWduYXR1cmUiOiIweDQwYjExYTU0NGE1OTQwYzlkYmQwMjVhNTFkYWUyNzA5ZWJlZjZmM2I4OWQzYjRjM2JhZWE0ZmQzMjQwMmI1ZmI0MGUyZTYxOTQ5NjIwNDQ1NGQ3ZDFlZWFhMDE5NDA1OWY3NWIwNDdmY2Y1Mjg4MjhhZTE2OTlkZTlmMWE0YzQ0MWIifQ=='))
+    return res.send(calculateDiscount(req.params.signature))
 })
 
 app.get('/coupon', (req, res) => {
