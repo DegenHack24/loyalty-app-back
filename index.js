@@ -2,7 +2,10 @@ const express = require('express')
 const {calculateDiscount} = require("./service/discount");
 const {couponMockData} = require("./mock/couponMockData");
 const app = express()
+const cors = require('cors')
 const port = 3000
+
+app.use(cors())
 
 app.get('/discount/:signature', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
