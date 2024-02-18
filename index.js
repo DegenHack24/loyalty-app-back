@@ -9,19 +9,11 @@ require('dotenv').config()
 
 app.use(cors())
 
-app.get('/discount/:signature', (req, res) => {
-    const ret = axios.get(process.env.SIRA_API_URL, {
-        params:{
-            signature: req.params.signature
-        }
-    })
 
-    console.log("xd")
-    console.log(ret.data)
-
-
+app.get('/discount/:signature', async (req, res) => {
     res.setHeader('Content-Type', 'application/json')
-    return res.send(calculateDiscount(req.params.signature))
+    const data = await calculateDiscount(req.params.signature);
+    return res.send(data)
 })
 
 app.get('/coupon', (req, res) => {
