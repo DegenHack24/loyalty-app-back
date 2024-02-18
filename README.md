@@ -44,7 +44,7 @@ Example response:
 {
     "couponCode": "3e755062-0676-431e-92ff-14ea6174f5b9",
     "name": "Ticket Legia - Korona Kielce up to 5% off",
-    "expirationDate": "2025-02-24"
+    "expirationDate": "2025-02-24",
 }
 ```
 

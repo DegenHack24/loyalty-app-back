@@ -3,11 +3,23 @@ const {calculateDiscount} = require("./service/discount");
 const {couponMockData} = require("./mock/couponMockData");
 const app = express()
 const cors = require('cors')
+const axios = require("axios");
 const port = 3000
+require('dotenv').config()
 
 app.use(cors())
 
 app.get('/discount/:signature', (req, res) => {
+    const ret = axios.get(process.env.SIRA_API_URL, {
+        params:{
+            signature: req.params.signature
+        }
+    })
+
+    console.log("xd")
+    console.log(ret.data)
+
+
     res.setHeader('Content-Type', 'application/json')
     return res.send(calculateDiscount(req.params.signature))
 })
