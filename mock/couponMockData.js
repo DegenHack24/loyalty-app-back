@@ -14,7 +14,7 @@ const couponMockData = [
         "image": "https://umpire-media-files.s3.us-east-1.amazonaws.com/777cab38-18b4-4ae2-a11e-6a134a8542ab/1704811261_Legia_Warszawa.png"
     },
     {
-        "couponCode": "3e755062-0676-431e-92ff-14ea6174f5b9",
+        "couponCode": "83738757-09f6-4f76-8fa4-525d3f2ebeaf",
         "name": "Spodenki adidas 10% off",
         "expirationDate": "2024-12-31",
         "description": "Spodenki adidas trzeci komplet 2023/24 – HT6468",
